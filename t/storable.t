@@ -21,7 +21,7 @@ use Tie::RefHash;
 use Storable qw/dclone nfreeze thaw/;
 
 $\ = "\n";
-print "1..24";
+print "1..42";
 
 sub ok ($$) {
     print ( ( $_[0] ? "" : "not " ), "ok - $_[1]" );
