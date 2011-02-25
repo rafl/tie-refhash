@@ -1,3 +1,8 @@
+1.39
+  - Add LICENSE section to the documentation
+  - Fix detection of threaded perl builds in the tests
+  - Fix STORABLE_freeze when no plain keys are added
+
 1.38
   - Skip threaded.t in more situations where it's borked
 
