@@ -10,4 +10,5 @@
 \.tar\.gz$
 ^test_mpegs
 ^_darcs
+^\.git
 ^Build.PL$
