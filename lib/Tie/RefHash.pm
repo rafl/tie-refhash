@@ -1,10 +1,9 @@
 package Tie::RefHash;
 
-use vars qw/$VERSION/;
+use 5.006;
+use strict;
 
-$VERSION = "1.39";
-
-use 5.005;
+our $VERSION = "1.39";
 
 =head1 NAME
 
@@ -12,7 +11,7 @@ Tie::RefHash - use references as hash keys
 
 =head1 SYNOPSIS
 
-    require 5.004;
+    require 5.006;
     use Tie::RefHash;
     tie HASHVARIABLE, 'Tie::RefHash', LIST;
     tie HASHVARIABLE, 'Tie::RefHash::Nestable', LIST;
@@ -93,9 +92,9 @@ perl(1), perlfunc(1), perltie(1)
 =cut
 
 use Tie::Hash;
-use vars '@ISA';
-@ISA = qw(Tie::Hash);
-use strict;
+
+our @ISA = q(Tie::Hash);
+
 use Carp qw/croak/;
 
 BEGIN {
@@ -264,8 +263,7 @@ sub CLEAR {
 }
 
 package Tie::RefHash::Nestable;
-use vars '@ISA';
-@ISA = 'Tie::RefHash';
+our @ISA = 'Tie::RefHash';
 
 sub STORE {
   my($s, $k, $v) = @_;

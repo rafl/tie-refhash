@@ -1,4 +1,5 @@
 Tie-RefHash-*
+/.build/
 /META.yml
 /Makefile
 /inc
