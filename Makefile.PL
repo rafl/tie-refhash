@@ -15,8 +15,13 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Tie/RefHash.pm',
           'PREREQ_PM' => {},
           'INSTALLDIRS' => 'perl',
-          'PL_FILES' => {}
-        )
-;
-
-
+          'PL_FILES' => {},
+          'META_MERGE' => {
+               resources => {
+                    license     => 'http://dev.perl.org/licenses/',
+                    homepage    => 'https://metacpan.org/release/Tie-RefHash',
+                    bugtracker  => 'https://rt.cpan.org/Dist/Display.html?Name=Tie-RefHash',
+                    repository  => 'https://github.com/rafl/tie-refhash',
+               },
+           },
+);
